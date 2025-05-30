@@ -1,0 +1,40 @@
+{
+  "name": "magento-automation",
+  "version": "1.0.0",
+  "description": "Automation framework for Magento with Playwright and Cucumber",
+  "scripts": {
+    "test": "cucumber-js --require-module @babel/register --require features/step-definitions/*.js --require features/support/hooks.js --format html:cucumber-report.html --format json:cucumber-report.json",
+    "test:login": "npm run test -- --tags \"@login\"",
+    "test:register": "npm run test -- --tags \"@registration\"",
+    "test:purchase": "npm run test -- --tags \"@purchase\"",
+    "test:browser": "npm run test -- --world-parameters '{\"browser\":\"chromium\"}'",
+    "test:all": "npm run test:login && npm run test:register && npm run test:purchase",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "postinstall": "npx playwright install",
+    "report": "node generate-report.js"
+  },
+  "dependencies": {
+    "chai": "^4.5.0",
+    "playwright": "^1.52.0",
+    "dotenv": "^16.4.1",
+    "faker": "^8.4.0"
+  },
+  "engines": {
+    "node": "<=20.x"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.21",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "allure-cucumberjs": "^2.6.0",
+    "multiple-cucumber-html-reporter": "^4.3.1"
+  }
+}
