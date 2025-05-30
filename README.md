@@ -7,32 +7,34 @@ Utiliza **Playwright**, **Cucumber.js** y **JavaScript**, estructurado bajo el p
 ---
 
 ## 📁 Estructura del Proyecto
-CUCUMBERPWTEST/
-├── features/
-│ ├── pages/ # Page Object Model (POM)
-│ │ ├── accountPage.js
-│ │ ├── basePage.js
-│ │ ├── homePage.js
-│ │ ├── loginPage.js
-│ │ ├── productPage.js
-│ │ └── registrationPage.js
-│ ├── step-definitions/ # Step Definitions para cada feature
-│ │ ├── loginSteps.js
-│ │ ├── purchaseSteps.js
-│ │ └── registrationSteps.js
-│ ├── 01_login.feature # Escenario de Login
-│ ├── 02_registration.feature # Escenario de Registro
-│ └── 03_purchase.feature # Escenario de Compra
-├── support/
-│ ├── hooks.js # Hooks globales de Cucumber
-│ └── world.js # Configuración personalizada del "World" (parámetros)
-├── .babelrc # Configuración Babel (ES6+)
+
+```plaintext
+📂 magento-automation
+├── 📁 features
+│   ├── 📁 pages
+│   │   ├── accountPage.js
+│   │   ├── basePage.js
+│   │   ├── homePage.js
+│   │   ├── loginPage.js
+│   │   ├── productPage.js
+│   │   └── registrationPage.js
+│   ├── 📁 step-definitions
+│   │   ├── loginSteps.js
+│   │   ├── purchaseSteps.js
+│   │   └── registrationSteps.js
+│   ├── 01_login.feature
+│   ├── 02_registration.feature
+│   └── 03_purchase.feature
+├── 📁 support
+│   ├── hooks.js
+│   └── world.js
+├── 📁 playwright-report
+├── .babelrc
 ├── .gitignore
-├── cucumber-report.json # Reporte JSON de Cucumber
-├── playwright.config.js # Configuración de Playwright
-├── package.json # Configuración del proyecto y scripts
+├── cucumber-report.json
+├── playwright.config.js
+├── package.json
 ├── README.md
-└── playwright-report/ # Reportes de Playwright
 
 ## ⚙️ Requisitos Previos
 - Node.js v18 - v20
