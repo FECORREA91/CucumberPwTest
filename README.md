@@ -33,8 +33,8 @@ CUCUMBERPWTEST/
 ├── package.json # Configuración del proyecto y scripts
 ├── README.md
 └── playwright-report/ # Reportes de Playwright
-## ⚙️ Requisitos Previos
 
+## ⚙️ Requisitos Previos
 - Node.js v18 - v20
 - npm
 
