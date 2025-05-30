@@ -36,56 +36,68 @@ Utiliza **Playwright**, **Cucumber.js** y **JavaScript**, estructurado bajo el p
 ├── package.json
 ├── README.md
 
-## ⚙️ Requisitos Previos
-- Node.js v18 - v20
-- npm
-
-Verifica:
-
-```bash
-node -v
-npm -v
+```
+⚙️ Requisitos Previos
+Node.js: versión 18 a 20
+npm: gestor de paquetes de Node.js
 
 📦 Instalación
 Clona el repositorio:
-git clone https://github.com/tu-usuario/magento-automation.git
-cd magento-automation
 
-Instala dependencias:
+```
+git clone [https://github.com/tu-usuario/magento-automation.git](https://github.com/tu-usuario/magento-automation.git)
+cd magento-automation
+```
+Instala las dependencias necesarias:
+
+```
 npm install
 npx playwright install
 
-🚀 Ejecución de Pruebas
-✅ Ejecutar todas las pruebas:
+```
+🚀 Ejecución de Pruebas:
+```
+Ejecutar todas las pruebas por defecto:
 npm test
+```
 
-▶️ Ejecutar por tags:
-npm run test:login        # Solo login
-npm run test:register     # Solo registro
-npm run test:purchase     # Solo compra
+▶️ Ejecutar Pruebas por Etiquetas (Tags)
+Solo login:
+```
+npm run test:login
+```
+Solo registro:
+```
+npm run test:register
+```
+Solo compra:
+```
+npm run run test:purchase
+```
+🌐 Ejecutar con Navegador Específico
 
-🌐 Ejecutar con navegador específico:
+```
 npm run test:browser
+```
+🔁 Ejecutar Todas las Pruebas con Etiquetas
+```
 
-🔁 Ejecutar todas las pruebas con etiquetas:
 npm run test:all
-
-📊 Reportes
+```
+📊 Generar Reportes
+```
 npm run report
+```
+📚 Tecnologías Utilizadas
+Playwright – Automatización de navegadores moderna y confiable
+Cucumber.js – Framework BDD con lenguaje Gherkin
+Chai – Librería de aserciones
+Faker – Generador de datos falsos para pruebas
+Dotenv – Gestión de variables de entorno
+Allure / Multiple HTML Reporter – Herramientas para generación de reportes visuales
 
-📚 Tecnologías
-
-Playwright – automatización de navegadores
-Cucumber.js – pruebas BDD con lenguaje Gherkin
-Chai – aserciones
-Faker – generación de datos de prueba
-Dotenv – manejo de variables de entorno
-Allure / Multiple HTML Reporter – generación de reportes
-
-🧠 Tips
+🧠 Tips Útiles
 Mantén los Page Objects independientes y reutilizables.
-Usa los hooks.js para manejar before, after, setup o limpieza de contexto.
-Usa world.js para configurar navegadores, parámetros, etc.
-Utiliza tags como @login, @purchase para segmentar la ejecución.
-
-
+Usa hooks.js para manejar acciones de before, after, configuración y limpieza de contexto.
+Usa world.js para configurar navegadores, parámetros globales y más.
+Utiliza tags como @login, @purchase, etc., para segmentar la ejecución de pruebas.
